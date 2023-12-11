@@ -4,13 +4,8 @@ const withPWA = require("next-pwa")({
   skipWaiting: true,
 })
 
-const nextConfig = {
+const nextConfig = withPWA({
   reactStrictMode: true,
-  ...withPWA({
-    experimental: {
-      newNextLinkBehavior: true,
-    },
-  })
-}
+})
 
 module.exports = nextConfig
